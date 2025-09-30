@@ -46,13 +46,13 @@ jobs:
       - name: Rename JAR
         run: |
           mkdir -p release
-          cp build/libs/*.jar release/moranda-${TAG_NAME}.jar
+          cp build/libs/*.jar release/static_analyze-${TAG_NAME}.jar
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ env.TAG_NAME }}
           name: Release ${{ env.TAG_NAME }}
-          files: release/moranda-${{ env.TAG_NAME }}.jar
+          files: release/static_analyze-${{ env.TAG_NAME }}.jar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
