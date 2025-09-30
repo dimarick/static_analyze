@@ -1,10 +1,6 @@
 name: CI сборка для проекта
 
 on:
-  pull_request:
-    branches:
-      - 'master'
-      - 'i[0-9]+-*'
   push:
     branches:
       - 'master'
