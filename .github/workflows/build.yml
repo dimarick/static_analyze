@@ -35,6 +35,3 @@ jobs:
 
       - name:  Предоставление прав для gradlew
         run: ./gradlew build
-
-      - name:  Предоставление прав для gradlew
-        run: ./gradlew check
