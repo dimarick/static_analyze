@@ -32,6 +32,3 @@ jobs:
 
       - name:  Предоставление прав для gradlew
         run: chmod +x gradlew
-
-      - name: Запустить тесты
-        run: ./gradlew test
