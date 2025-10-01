@@ -16,19 +16,22 @@ jobs:
       - name: Установить Java
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: '8'
           distribution: 'temurin'
 
       - name: Установаить Gradle
         uses: gradle/gradle-build-action@v2
         with:
-          gradle-version: '8.13'
+          gradle-version: '7.2'
 
       - name: Проверка версии Gradle
         run: gradle --version
 
       - name: Установка Gradle wrapper
-        run: gradle wrapper --gradle-version=8.13
+        run: gradle wrapper --gradle-version=7.2
 
       - name:  Предоставление прав для gradlew
         run: chmod +x gradlew
+
+      - name:  Предоставление прав для gradlew
+        run: ./gradlew build
